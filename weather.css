@@ -1,0 +1,235 @@
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+.wrapper{
+    height:100vh;
+    width:100vw;
+    color: var(--colorLight2);
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);;
+}
+h1 {
+    text-align: center;
+    text-transform:uppercase;
+    padding-top:15px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+.tab-container{
+    width:90%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.tab{
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 4px 7px;
+}
+.tab:hover{
+    background-color: rgb(219,226,239,0.5) ;
+    border-radius: 4px ;
+}
+.tab.current-tab{
+    background-color: rgb(219,226,239,0.5);
+    border-radius: 4px;
+}
+.container{
+    margin-block: 2rem;
+}
+.btn{
+    all: unset;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: var(--colorDark2);
+    cursor: pointer;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+}
+.btn:hover{
+    background-color: rgb(219,226,239,0.5) ;
+    transform: scale(1.1); 
+    transition: all 0.15s;
+}
+
+.sub-container{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+.grant-location-container{
+    display:none; 
+}
+.grant-location-container.active{
+    display:flex;
+}
+.grant-location-container img{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.grant-location-container p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600; 
+}
+.grant-location-container p:last-of-type{
+    font-size:0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+}
+.access{
+    font-size:0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+    color: red;
+}
+
+.loading-container{
+    display: none;
+}
+
+.loading-container.active{
+    display: flex;
+}
+.loading-container p{
+    text-transform: uppercase;
+}
+.weather-info-container{
+    display:none;
+}
+.weather-info-container.active{
+    display: flex;
+}
+.weather-info-container p{
+    font-size:1.5rem;
+    font-weight:200;
+}
+.weather-info-container img{
+    width:80px;
+    height:80px;
+}
+.place-flag{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+.place-flag p{
+    font-size:2rem;
+}
+.place-flag img{
+    width: 30px;
+    height:30px;
+    object-fit: contain;
+}
+.weather-info-container p[data-temp] {
+    font-size:2rem;
+    font-weight:700;
+}
+.weather-parameter{
+    width:90%;
+    display: flex;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.parameter{
+    width:30%;
+    max-width:200px;
+    background-color: rgba(137, 167, 223, 0.5);;
+    border-radius: 5px;
+    padding:1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap:5px 0;
+    align-items: center; 
+}   
+
+.parameter img{
+    width:50px;
+    height:50px;
+}
+
+.parameter p:first-of-type{
+    font-size: 1.15rem;
+    font-weight:600;
+    text-transform: uppercase;
+    margin:0.5rem;
+}
+
+.parameter p:last-of-type{
+    font-size: 1rem;
+    font-weight: 200;
+}
+#wind{
+    filter: brightness(20);
+}
+#clouds{
+    filter: brightness(1.5);
+}
+#humidity{
+    filter: brightness(1);
+}
+.form-container{
+    display: none;
+    width:90%;
+    max-width:550px;
+    margin:0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px; 
+    margin-bottom: 1.5rem;
+}
+
+.form-container.active{
+    display: flex;
+}
+.form-container input{
+    all:unset;
+    width: calc(100% - 80px);
+    height:30px;
+    padding: 0 20px;
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+}
+.form-container input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+.form-container input:focus{
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+.form-container .btn {
+    padding:unset;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-bottom:1px;
+}
+.form-big-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
