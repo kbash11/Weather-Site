@@ -127,7 +127,7 @@ function renderWeatherInfo(weatherInfo){
 const searchInput=document.querySelector("[data-searchInput]"); 
 searchForm.addEventListener("submit",(e)=>{
     e.preventDefault();
-    let regex = /^[a-zA-Z]+$/;                  // to check city name contains only letters
+    let regex = /^[a-zA-Z ]+$/;                  // to check city name contains only letters
 
     let cityName=searchInput.value;
    
